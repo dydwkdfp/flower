@@ -3,7 +3,7 @@ import React,{useState} from 'react';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {ImageData} from '../data/sliderdata.js';
-import {CarouselContainer, CarouselWrapper, CarouselContent,CarouselImage} from '../styles/CarouselStyle';
+import {CarouselContainer, CarouselWrapper, CarouselContent,CarouselImage, CarouselbackArrow, CarouselfrontArrow} from '../styles/CarouselStyle';
 
 
 const ImageSlider = ({slides}) => {
@@ -25,8 +25,12 @@ const ImageSlider = ({slides}) => {
 
     return (
         <section className="slider">
-            <ArrowBackIosIcon onClick={prevSlide}/>
-            <ArrowForwardIosIcon onClick={nextSlide}/>
+            <CarouselbackArrow>
+            <ArrowBackIosIcon color='inherit' onClick={prevSlide}/>
+            </CarouselbackArrow>
+            <CarouselfrontArrow>
+            <ArrowForwardIosIcon color='inherit' onClick={nextSlide}/>
+            </CarouselfrontArrow>
             {slides.map((slide, index) => {
                     return(
                         <div className={index === current ? 'slide active' : 'slide'} key={index}>

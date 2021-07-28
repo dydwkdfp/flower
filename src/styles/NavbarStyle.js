@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
-    padding: 20px 50px;
+    padding: 10px 50px;
     height: 80px;
     display: flex;
     justify-content: center;
