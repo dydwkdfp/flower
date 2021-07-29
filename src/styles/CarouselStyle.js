@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
-    background: #010606;   
 `
 
 export const CarouselWrapper = styled.div`
@@ -77,10 +76,10 @@ export const CarouselTextWrapper = styled.div`
 `
 
 export const CarouselTitle = styled.h1`
-    color: ${({themeColor})=> (themeColor ? '#E1B795' : '#B3AEFF')};
+    color: ${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
     font-size: 70px;
-    font-family: 'WindSong', sans-serif;
-    weight:500;
+    font-family: 'WindSong', cursive;
+    font-weight:500;
     line-height: 0;
 
     @media screen and (max-width:1280px){
@@ -91,7 +90,7 @@ export const CarouselComment = styled.p`
     margin-top: -10px;
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
-    weight:800;
+    font-weight:800;
     line-height: 0;
 
     @media screen and (max-width:1280px){

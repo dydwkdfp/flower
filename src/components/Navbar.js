@@ -43,7 +43,7 @@ const Navbar = () => {
                 <NavbarLogo themeColor={ThemeColor}>
                     Flower
                 </NavbarLogo>
-                <NavbarMobileIcon>
+                <NavbarMobileIcon themeColor={ThemeColor} >
                     <MenuIcon color="inherit"/>
                 </NavbarMobileIcon>
                 </NavbarMobile>
