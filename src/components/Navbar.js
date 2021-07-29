@@ -5,8 +5,10 @@ NavbarSettingIcon, NavbarSettings,
  NavbarPC,NavbarMobileIcon, NavbarMobile, NavbarHomeMenu} from '../styles/NavbarStyle';
  import MenuIcon from '@material-ui/icons/Menu';
 
+
+
 const Navbar = () => {
-    const [ThemeColor,setThemeColor]=useState(false);
+    const [ThemeColor,setThemeColor] = useState(false);
 
     const changeColorGold = () =>{
         setThemeColor(true);
@@ -25,10 +27,10 @@ const Navbar = () => {
                     <NavbarHomeMenu themeColor={ThemeColor} to="/MainPage">
                         Home
                     </NavbarHomeMenu>
-                    <NavbarMenu to="/Gallery">
+                    <NavbarMenu themeColor={ThemeColor} to="/Gallery">
                         Gallery
                     </NavbarMenu>
-                    <NavbarMenu to="/Contact">
+                    <NavbarMenu themeColor={ThemeColor} to="/Contact">
                         Contact
                     </NavbarMenu>
                 </NavbarMenuContainer>

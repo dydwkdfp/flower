@@ -10,7 +10,6 @@ export const NavbarContainer = styled.nav`
     position:sticky;
     top:0;
 
-    background:#000;
 
     @media screen and (max-width:800px){
         padding: 0 50px;
@@ -50,7 +49,11 @@ export const NavbarLogo = styled(LinkR)`
     font-weight: 500;
     text-decoration:none;
     font-size: 40px;
+    transition: all 1s;
     
+    &:hover{
+        color:${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
+    }
 `
 
 export const NavbarMenuContainer = styled.div`
@@ -71,10 +74,16 @@ export const NavbarHomeMenu = styled(LinkR)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    transition: all 1s;
+
+    &:hover{
+        color:${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
+    }
+
 
 `
 export const NavbarMenu = styled(LinkR)`
-    color: #fff;
+    color: #000;
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
@@ -83,6 +92,11 @@ export const NavbarMenu = styled(LinkR)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover{
+        color: ${({themeColor})=> (themeColor ? '#E1B795' : '#B3AEFF')};
+    }
 
 `
 

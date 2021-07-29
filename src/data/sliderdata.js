@@ -4,12 +4,18 @@ import Flower_3 from '../images/flower3.jpg';
 
 export const ImageData = [
     {
-        image: Flower_1
+        image: Flower_1,
+        Title: 'Welcome',
+        Content: 'Designing flower shop',
     },
     {
-        image: Flower_2
+        image: Flower_2,
+        Title: 'Quality',
+        Content: 'The Details',
     },
     {
-        image: Flower_3
+        image: Flower_3,
+        Title: 'Luxury',
+        Content: 'I really dont know',
     },
 ];

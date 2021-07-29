@@ -3,7 +3,11 @@ import React,{useState} from 'react';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {ImageData} from '../data/sliderdata.js';
-import {CarouselContainer, CarouselWrapper, CarouselContent,CarouselImage, CarouselbackArrow, CarouselfrontArrow} from '../styles/CarouselStyle';
+import {CarouselContainer, CarouselWrapper, CarouselContent,CarouselImage,
+     CarouselbackArrow, CarouselfrontArrow, CarouselTextWrapper,
+     CarouselTitle, CarouselComment} from '../styles/CarouselStyle';
+
+
 
 
 const ImageSlider = ({slides}) => {
@@ -35,7 +39,11 @@ const ImageSlider = ({slides}) => {
                     return(
                         <div className={index === current ? 'slide active' : 'slide'} key={index}>
                             {index === current && (<CarouselImage src={slide.image}/>)}
-                            <text className='indexshow'>{index+1}/{slides.length}</text>
+                            <CarouselTextWrapper>
+                            {index === current && (<CarouselTitle>{slide.Title}</CarouselTitle>)}
+                            {index === current && (<CarouselComment>{slide.Content}</CarouselComment>)}
+                            </CarouselTextWrapper>
+                            
                         </div>
                     )
                 })
