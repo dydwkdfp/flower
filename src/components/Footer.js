@@ -11,8 +11,8 @@ const Footer = () => {
                         About Us
                     </FooterTitle>
                     <FooterContent>
-                        this is a reactive page{<br/>}
-                        that was designed{<br/>}
+                        this is a reactive page
+                        that was designed
                         for portfolio purposes
                     </FooterContent>
                 </FooterItems>

@@ -34,6 +34,13 @@ export const FooterContent = styled.text`
     color:#bbb;
     font-weight:300;
     font-family: 'Poppins', sans-serif;
+    
+    @media screen and (max-width:800px){
+        font-size: 12px;
+    }
+    @media screen and (max-width:640px){
+        font-size: 10px;
+    }
 
 `
 export const FooterCopyright = styled.div`

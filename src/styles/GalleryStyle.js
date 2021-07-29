@@ -67,10 +67,10 @@ export const GalleryItemWrapper = styled(LinkR)`
     text-decoration:none;
     max-width:25%;
     width:25vw;
-    transition: all 1s;
+    transition: filter 1s;
     
     &:hover{
-        filter:brightness(115%);
+        filter:brightness(120%);
     }
 `
 export const GalleryItemTitle = styled.text`
@@ -92,7 +92,6 @@ export const GalleryItemTitle = styled.text`
 `
 export const GalleryItemImage = styled.img`
     width:100%;
-    transition: all 0.5s;
 
 `
 export const GalleryItemTitleWraper = styled.div`
