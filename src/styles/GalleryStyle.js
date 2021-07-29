@@ -42,7 +42,7 @@ export const GallerySubtitle = styled.div`
     margin-top: -5px;
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
-    font-weight:300;
+    font-weight:800;
     line-height: 0;
 
     @media screen and (max-width:1280px){

@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
     width: 100vw;
-    height: 250px;
+    height: 280px;
     background:#303030;
+`
+export const FooterGap = styled.div`
+    height:30px;
+    width:100%;
+    background: ${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
 `
 export const FooterWrapper = styled.div`
     display:flex;
@@ -11,7 +16,7 @@ export const FooterWrapper = styled.div`
     align-items:flex;
     margin: 0 40px;
     width:100%;
-    height:90%;
+    height:225px;
 `
 export const FooterItems = styled.div`
     margin: 30px 30px;
@@ -45,7 +50,7 @@ export const FooterContent = styled.text`
 `
 export const FooterCopyright = styled.div`
     background:#151515;
-    height:10%;
+    height:25px;
     display:flex;
     justify-content:center;
     align-items:center;

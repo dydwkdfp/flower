@@ -1,10 +1,11 @@
 import React from 'react'
 import { FooterContainer, FooterContent, FooterCopyright,
-FooterCopyrightContent, FooterItems, FooterTitle, FooterWrapper, } from '../styles/FooterStyle'
+FooterCopyrightContent, FooterItems, FooterTitle, FooterWrapper, FooterGap} from '../styles/FooterStyle'
 
 const Footer = () => {
     return (
         <FooterContainer>
+            <FooterGap/>
             <FooterWrapper>
                 <FooterItems>
                     <FooterTitle>

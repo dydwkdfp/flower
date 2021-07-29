@@ -9,7 +9,7 @@ const GalleryItemDisplay = ({items}) =>{
         <>
     {items.map((item, index)=> {
         return(
-            <GalleryItemWrapper>
+            <GalleryItemWrapper to={'/Gallery/'+item.category}>
             <GalleryItemImage src={item.image}/>
             <GalleryItemTitleWraper>
                 <GalleryItemTitle>
