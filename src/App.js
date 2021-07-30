@@ -4,6 +4,7 @@ import { Link, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import ProductPage from './pages/ProductPage';
 
 
 function MainPageDisplay(){
@@ -18,6 +19,14 @@ function GalleryDisplay(){
   return (
     <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <GalleryPage/>
+      </motion.div>
+  );
+};
+
+function ProductDisplay({type}){
+  return (
+    <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+      <ProductPage type={type}/>
       </motion.div>
   );
 };
@@ -42,16 +51,16 @@ function App() {
         <GalleryDisplay />
       </Route>
       <Route path="/Gallery/Garden">
-        <GalleryDisplay />
+        <ProductDisplay type="Garden" />
       </Route>
       <Route path="/Gallery/Orchid">
-        <GalleryDisplay />
+        <ProductDisplay type="Orchid"/>
       </Route>
       <Route path="/Gallery/Plants">
-        <GalleryDisplay />
+        <ProductDisplay type="Plants"/>
       </Route>
       <Route path="/Gallery/Cactus">
-        <GalleryDisplay />
+        <ProductDisplay type="Cactus"/>
       </Route>
       <Route path="/Contact">
         <ContactDisplay />
