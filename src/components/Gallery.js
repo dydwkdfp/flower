@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {GalleryData} from '../data/GalleryData';
 import { GalleryContainer,GalleryWrapper,GalleryItemWrapper,
 GalleryTitle,GalleryItems, GalleryItemTitle, GalleryTitleWrapper,
@@ -39,7 +39,6 @@ const Gallery = () => {
                 <GalleryItems>
                     <GalleryItemDisplay items={GalleryData}/>
                 </GalleryItems>
-
             </GalleryWrapper>
         </GalleryContainer>
     )

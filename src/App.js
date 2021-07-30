@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage';
 
 function MainPageDisplay(){
   return (
-    <motion.div initial =  {{scale: 0.9}} animate={{scale: 1}} exit={{scale: 0.9}}>
+    <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <MainPage/>
       </motion.div>
   );
@@ -16,7 +16,7 @@ function MainPageDisplay(){
 
 function GalleryDisplay(){
   return (
-    <motion.div initial =  {{scale: 0.9}} animate={{scale: 1}} exit={{scale: 0.9}}>
+    <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <GalleryPage/>
       </motion.div>
   );
@@ -24,7 +24,7 @@ function GalleryDisplay(){
 
 function ContactDisplay(){
   return (
-    <motion.div initial =  {{scale: 0.9}} animate={{scale: 1}} exit={{scale: 0.9}}>
+    <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <ContactPage/>
       </motion.div>
   );

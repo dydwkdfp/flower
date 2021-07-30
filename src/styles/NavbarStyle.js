@@ -4,12 +4,14 @@ import {Link as LinkR} from 'react-router-dom';
 export const NavbarContainer = styled.nav`
     z-index:2;
     padding: 10px 50px;
-    height: 80px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items:center;
     position:sticky;
     top:0;
+    transition: top 0.2s ease-in-out;
+    background:#fff;
 
 
     @media screen and (max-width:800px){

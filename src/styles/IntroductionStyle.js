@@ -55,6 +55,7 @@ export const TextWrapper = styled.div`
         max-width: 550px;
         align-items:center;
         margin-bottom: 50px;
+        margin-top: 30px;
         text-align:center;
     }
 `

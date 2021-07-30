@@ -6,6 +6,7 @@ import {ImageData} from '../data/sliderdata.js';
 import {CarouselContainer, CarouselWrapper, CarouselContent,CarouselImage,
      CarouselbackArrow, CarouselfrontArrow, CarouselTextWrapper,
      CarouselTitle, CarouselComment} from '../styles/CarouselStyle';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 
@@ -27,6 +28,20 @@ const ImageSlider = ({slides}) => {
 
     }
 
+    const imgvariants = {
+        initial:{opacity: 0},
+        animate:{opacity: 1},
+    };
+    const variants = {
+        initial:{y:250},
+        animate:{y:0},
+        animate:{y:0, transition:{duration:2,delay:0.2, type: 'spring', stiffness:120}},
+    };
+    const contentvariants = {
+        initial:{y:250},
+        animate:{y:0, transition:{duration:2,delay:0.4, type: 'spring', stiffness:40}},
+    };
+
     return (
         <section className="slider">
             <CarouselbackArrow>
@@ -38,12 +53,19 @@ const ImageSlider = ({slides}) => {
             {slides.map((slide, index) => {
                     return(
                         <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                            <AnimatePresence>
+                            <motion.div variants={imgvariants} initial="initial" animate={index===current ? "animate" : "initial"}>
                             {index === current && (<CarouselImage src={slide.image}/>)}
+                            </motion.div>
                             <CarouselTextWrapper>
+                            <motion.div variants={variants} initial="initial" animate={index===current ? "animate" : "initial"}>
                             {index === current && (<CarouselTitle>{slide.Title}</CarouselTitle>)}
+                            </motion.div>
+                            <motion.div variants={contentvariants} initial="initial" animate={index===current ? "animate" : "initial"}>
                             {index === current && (<CarouselComment>{slide.Content}</CarouselComment>)}
+                            </motion.div>
                             </CarouselTextWrapper>
-                            
+                            </AnimatePresence>
                         </div>
                     )
                 })

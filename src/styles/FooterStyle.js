@@ -4,6 +4,7 @@ export const FooterContainer = styled.div`
     width: 100vw;
     height: 280px;
     background:#303030;
+    max-width:100%;
 `
 export const FooterGap = styled.div`
     height:30px;
