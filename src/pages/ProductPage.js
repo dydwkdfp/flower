@@ -3,11 +3,11 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Product from '../components/Product';
 
-const ProductPage = () => {
+const ProductPage = ({type, Data}) => {
     return (
         <>
         <Navbar/>
-        <Product/>
+        <Product type={type} Data={Data}/>
         <Footer/>
         </>
     )

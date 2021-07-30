@@ -5,6 +5,9 @@ import MainPage from './pages/MainPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import ProductPage from './pages/ProductPage';
+import { OrchidData, GardenData, PlantsData, CactusData } from './data/ProductData.js';
+
+
 
 
 function MainPageDisplay(){
@@ -23,10 +26,11 @@ function GalleryDisplay(){
   );
 };
 
-function ProductDisplay({type}){
+function ProductDisplay({type,Data}){
   return (
     <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-      <ProductPage type={type}/>
+      
+      <ProductPage type={type} Data={Data}/>
       </motion.div>
   );
 };
@@ -50,17 +54,17 @@ function App() {
       <Route path="/Gallery">
         <GalleryDisplay />
       </Route>
-      <Route path="/Gallery/Garden">
-        <ProductDisplay type="Garden" />
+      <Route path="/Product/Garden">
+        <ProductDisplay type={"Garden"} Data={GardenData}/>
       </Route>
-      <Route path="/Gallery/Orchid">
-        <ProductDisplay type="Orchid"/>
+      <Route path="/Product/Orchid">
+        <ProductDisplay type={"Orchid"} Data={OrchidData}/>
       </Route>
-      <Route path="/Gallery/Plants">
-        <ProductDisplay type="Plants"/>
+      <Route path="/Product/Plants">
+        <ProductDisplay type={"Plants"} Data={PlantsData}/>
       </Route>
-      <Route path="/Gallery/Cactus">
-        <ProductDisplay type="Cactus"/>
+      <Route path="/Product/Cactus">
+        <ProductDisplay type={"Cactus"} Data={CactusData}/>
       </Route>
       <Route path="/Contact">
         <ContactDisplay />
