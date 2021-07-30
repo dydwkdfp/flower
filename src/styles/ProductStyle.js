@@ -9,16 +9,25 @@ export const ProductWrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 `
 export const ProductItem = styled.div`
-    
+    flex: 1 1 30%;
+    margin-bottom: 30px;
+    position:relative;
+    transition: all 0.5s;
+
+    &:hover{
+        transform: scale(1.1);
+        filter: brightness(110%);
+    }
 `
 export const ProductItemWrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+    margin: 50px 30px;
 `
 export const ProductItemTitle = styled.div`
     color: #fff;
@@ -27,21 +36,23 @@ export const ProductItemTitle = styled.div`
     font-weight:500;
     line-height: 0;
     text-align: right;
+    position:absolute;
+    top:10%;
+    right:20%;
 
     @media screen and (max-width:1280px){
         font-size: 28px;
     }
     @media screen and (max-width:800px){
-        font-size: 26px;
+        font-size: 20px;
     }
     @media screen and (max-width:640px){
-        font-size: 24px;
+        font-size: 12px;
     }
     
 `
 export const ProductImage = styled.img`
-    width:200px;
-    height:200px;
+    width:90%;
 `
 
 export const ProductTitle = styled.h1`
@@ -50,6 +61,7 @@ export const ProductTitle = styled.h1`
     font-family: 'WindSong', cursive;
     font-weight:500;
     line-height: 0;
+    
 
     @media screen and (max-width:1280px){
         font-size: 60px;
