@@ -108,7 +108,6 @@ export const textContent = styled.text`
             text-align:center;
     }
     @media screen and (max-width:640px){
-       text-align:center;
        font-size: 12px;
     }
 
