@@ -6,7 +6,7 @@ import Flower4 from '../images/flowerpot4.jpg';
 export const GalleryData = [
     {
         image: Flower1,
-        category: 'Garden',
+        category: 'Flower',
     },
     {
         image: Flower2,

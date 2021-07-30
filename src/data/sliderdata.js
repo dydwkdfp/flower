@@ -1,6 +1,6 @@
-import Flower_1 from '../images/flower1.jpg';
-import Flower_2 from '../images/flower2.jpg';
-import Flower_3 from '../images/flower3.jpg';
+import Flower_1 from '../images/flowerwall1.jpg';
+import Flower_2 from '../images/flowerwall2.jpg';
+import Flower_3 from '../images/flowerwall3.jpg';
 
 export const ImageData = [
     {

@@ -30,7 +30,7 @@ export const ProductItemWrapper = styled.div`
     margin: 50px 30px;
 `
 export const ProductItemTitle = styled.div`
-    color: #fff;
+    color: #000;
     font-size: 30px;
     font-family: 'WindSong', cursive;
     font-weight:500;

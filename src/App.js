@@ -5,7 +5,7 @@ import MainPage from './pages/MainPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import ProductPage from './pages/ProductPage';
-import { OrchidData, GardenData, PlantsData, CactusData } from './data/ProductData.js';
+import { OrchidData, FlowerData, PlantsData, CactusData } from './data/ProductData.js';
 
 
 
@@ -54,8 +54,8 @@ function App() {
       <Route path="/Gallery">
         <GalleryDisplay />
       </Route>
-      <Route path="/Product/Garden">
-        <ProductDisplay type={"Garden"} Data={GardenData}/>
+      <Route path="/Product/Flower">
+        <ProductDisplay type={"Flower"} Data={FlowerData}/>
       </Route>
       <Route path="/Product/Orchid">
         <ProductDisplay type={"Orchid"} Data={OrchidData}/>
