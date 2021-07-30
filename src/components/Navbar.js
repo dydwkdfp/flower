@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import {NavbarContainer, NavbarLogo,
 NavbarMenu, NavbarMenuContainer,
 NavbarSettingIcon, NavbarSettings,
- NavbarPC,NavbarMobileIcon, NavbarMobile, NavbarHomeMenu, Menustyle} from '../styles/NavbarStyle';
+ NavbarPC,NavbarMobileIcon, NavbarMobile, NavbarHomeMenu} from '../styles/NavbarStyle';
  import MenuIcon from '@material-ui/icons/Menu';
  import Menu from '@material-ui/core/Menu';
  import MenuItem from '@material-ui/core/MenuItem';
@@ -58,7 +58,6 @@ const Navbar = () => {
                 </NavbarLogo>
                 <NavbarMobileIcon themeColor={ThemeColor} >
                     <MenuIcon color="inherit" onClick={handleClick}/>
-                    <Menustyle>
                     <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose} >
                         <MenuItem>
                             <LinkR to="/Main">
@@ -76,7 +75,6 @@ const Navbar = () => {
                             </LinkR>
                         </MenuItem>
                     </Menu>
-                    </Menustyle>
                 </NavbarMobileIcon>
                 </NavbarMobile>
         </NavbarContainer>
