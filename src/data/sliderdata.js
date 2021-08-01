@@ -16,6 +16,6 @@ export const ImageData = [
     {
         image: Flower_3,
         Title: 'Luxury',
-        Content: 'Modern Simple Designs',
+        Content: 'Modern Simple',
     },
 ];

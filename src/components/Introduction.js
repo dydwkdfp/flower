@@ -30,8 +30,7 @@ const Introduction = (props) => {
                                 What we do
                             </Subtitle>
                             <textContent>
-                                I guess I'm trying to get a job as front-end developer. Which is really difficult
-                                If i don't have any experiences before.
+                                we believe that every person is unique and deserves the most inspiring bouquet created especially for them. We work with the freshest, high-end flowers available, and deliver a one-of-a-kind arrangement perfect for the occasion.
                             </textContent>
                         </TextWrapper>
                     </div>
