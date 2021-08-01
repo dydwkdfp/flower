@@ -5,9 +5,9 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import CallIcon from '@material-ui/icons/Call';
 
 
-const Contact = () => {
+const Contact = (props) => {
     return (
-        <ContactContainer>
+        <ContactContainer themeColor={props.themeColor}>
             <ContactWrapper>
                 <ContactTitle>
                     Contact

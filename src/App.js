@@ -6,68 +6,73 @@ import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import ProductPage from './pages/ProductPage';
 import { OrchidData, FlowerData, PlantsData, CactusData } from './data/ProductData.js';
+import react,{useState} from 'react';
 
 
 
 
-function MainPageDisplay(){
+function MainPageDisplay(props){
   return (
     <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-      <MainPage/>
+      <MainPage themeColor={props.themeColor} getColorValue={props.getColorValue}/>
       </motion.div>
   );
 };
 
-function GalleryDisplay(){
+function GalleryDisplay(props){
   return (
     <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-      <GalleryPage/>
+      <GalleryPage themeColor={props.themeColor} getColorValue={props.getColorValue}/>
       </motion.div>
   );
 };
 
-function ProductDisplay({type,Data}){
+function ProductDisplay(props){
   return (
     <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       
-      <ProductPage type={type} Data={Data}/>
+      <ProductPage type={props.type} Data={props.Data} themeColor={props.themeColor} getColorValue={props.getColorValue}/>
       </motion.div>
   );
 };
 
-function ContactDisplay(){
+function ContactDisplay(props){
   return (
     <motion.div initial =  {{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-      <ContactPage/>
+      <ContactPage themeColor={props.themeColor} getColorValue={props.getColorValue}/>
       </motion.div>
   );
 };
 
 function App() {
   const location = useLocation();
+  const [themeColor, setThemeColor] = useState(false);
+  const getColorValue = (color) =>{
+      setThemeColor(color);
+  }
   return (
     <AnimatePresence exitBeforeEnter>
     <Switch location={location} key={location.pathname}>
       <Route path="/Main">
-        <MainPageDisplay />
+        <MainPageDisplay themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/Gallery">
-        <GalleryDisplay />
+        <GalleryDisplay  themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/Product/Flower">
-        <ProductDisplay type={"Flower"} Data={FlowerData}/>
+        <ProductDisplay type={"Flower"} Data={FlowerData}  themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/Product/Orchid">
-        <ProductDisplay type={"Orchid"} Data={OrchidData}/>
+        <ProductDisplay type={"Orchid"} Data={OrchidData}  themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/Product/Plants">
-        <ProductDisplay type={"Plants"} Data={PlantsData}/>
+        <ProductDisplay type={"Plants"} Data={PlantsData}  themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/Product/Cactus">
-        <ProductDisplay type={"Cactus"} Data={CactusData}/>
+        <ProductDisplay type={"Cactus"} Data={CactusData}  themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/Contact">
-        <ContactDisplay />
+        <ContactDisplay  themeColor={themeColor} getColorValue={getColorValue}/>
       </Route>
       <Route path="/">
         <Redirect to="Main" />

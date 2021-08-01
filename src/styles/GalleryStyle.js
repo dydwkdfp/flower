@@ -20,6 +20,7 @@ export const GalleryTitleWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction:column;
+    transition: all 1s;
 
     @media screen and (max-width:800px){
         height: 100px;

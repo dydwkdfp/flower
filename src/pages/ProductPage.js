@@ -3,12 +3,12 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Product from '../components/Product';
 
-const ProductPage = ({type, Data}) => {
+const ProductPage = (props) => {
     return (
         <>
-        <Navbar/>
-        <Product type={type} Data={Data}/>
-        <Footer/>
+        <Navbar themeColor={props.themeColor} getColorValue={props.getColorValue}/>
+        <Product type={props.type} Data={props.Data}  themeColor={props.themeColor}/>
+        <Footer  themeColor={props.themeColor}/>
         </>
     )
 }

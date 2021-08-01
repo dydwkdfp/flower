@@ -81,6 +81,7 @@ export const CarouselTitle = styled.h1`
     font-family: 'WindSong', cursive;
     font-weight:500;
     line-height: 0;
+    transition: all 1s;
 
     @media screen and (max-width:1280px){
         font-size: 60px;
@@ -100,6 +101,6 @@ export const CarouselComment = styled.p`
         font-size: 25px;
     }
     @media screen and (max-width:640px){
-        font-size: 20px;
+        font-size: 16px;
     }
 `

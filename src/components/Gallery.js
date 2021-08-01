@@ -23,11 +23,11 @@ const GalleryItemDisplay = ({items}) =>{
     )
 }
 
-const Gallery = () => {
+const Gallery = (props) => {
     return (
         <GalleryContainer>
             <GalleryWrapper>
-                <GalleryTitleWrapper>
+                <GalleryTitleWrapper  themeColor={props.themeColor}>
                     <GalleryTitle>
                         Modern
                     </GalleryTitle>

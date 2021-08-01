@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const ProductContainer = styled.div`
     width:100vw;
-    background: #E1B795;
+    transition: all 1s;
+    background: ${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
 `
 export const ProductWrapper = styled.div`
     display: flex;

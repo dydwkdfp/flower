@@ -9,16 +9,15 @@ NavbarSettingIcon, NavbarSettings,
  import {Link as LinkR} from 'react-router-dom';
 
 
-const Navbar = () => {
-    const [ThemeColor,setThemeColor] = useState(false);
+const Navbar = (props) => {
     const [anchorEl, setAnchorEl] = useState(null);
 
     
-    const changeColorGold = () =>{
-        setThemeColor(true);
+    const sendColorGold = () =>{
+        props.getColorValue(true);
     }
-    const changeColorBlue = () =>{
-        setThemeColor(false);
+    const sendColorBlue = () =>{
+        props.getColorValue(false);
     }
     
 
@@ -33,30 +32,30 @@ const Navbar = () => {
     return (
         <NavbarContainer>
                 <NavbarPC>
-                <NavbarLogo themeColor={ThemeColor} to="/Main">
+                <NavbarLogo themeColor={props.themeColor} to="/Main">
                     Flower
                 </NavbarLogo>
                 <NavbarMenuContainer>
-                    <NavbarHomeMenu themeColor={ThemeColor} to="/Main">
+                    <NavbarHomeMenu themeColor={props.themeColor} to="/Main">
                         Home
                     </NavbarHomeMenu>
-                    <NavbarMenu themeColor={ThemeColor} to="/Gallery">
+                    <NavbarMenu themeColor={props.themeColor} to="/Gallery">
                         Gallery
                     </NavbarMenu>
-                    <NavbarMenu themeColor={ThemeColor} to="/Contact">
+                    <NavbarMenu themeColor={props.themeColor} to="/Contact">
                         Contact
                     </NavbarMenu>
                 </NavbarMenuContainer>
                 <NavbarSettings>
-                    <NavbarSettingIcon themeColor={true} onClick={changeColorGold}/>
-                    <NavbarSettingIcon themeColor={false} onClick={changeColorBlue}/>
+                    <NavbarSettingIcon themeColor={true} onClick={sendColorGold}/>
+                    <NavbarSettingIcon themeColor={false} onClick={sendColorBlue}/>
                 </NavbarSettings>
                 </NavbarPC>
                 <NavbarMobile>
-                <NavbarLogo themeColor={ThemeColor}>
+                <NavbarLogo themeColor={props.themeColor}>
                     Flower
                 </NavbarLogo>
-                <NavbarMobileIcon themeColor={ThemeColor} >
+                <NavbarMobileIcon themeColor={props.themeColor} >
                     <MenuIcon color="inherit" onClick={handleClick}/>
                     <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose} >
                         <MenuItem>

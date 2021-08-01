@@ -9,6 +9,7 @@ export const FooterContainer = styled.div`
 export const FooterGap = styled.div`
     height:30px;
     width:100%;
+    transition: all 1s;
     background: ${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
 `
 export const FooterWrapper = styled.div`

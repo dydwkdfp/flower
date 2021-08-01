@@ -9,12 +9,12 @@ import {Link} from "react-router-dom";
 import { AnimateSharedLayout, AnimatePresence, motion } from 'framer-motion';
 import { product } from 'prelude-ls';
 
-export const Product = ({type, Data}) => {
+export const Product = ({type, Data, themeColor}) => {
     const [SelectedId, setSelectedId] = useState(null);
     const [image, setimage] = useState('');
 
     return (
-        <ProductContainer>
+        <ProductContainer themeColor={themeColor}>
             <ProductWrapper>
                 <ProductTitle>
                     {type}

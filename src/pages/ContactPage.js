@@ -3,12 +3,12 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 
-const ContactPage = () => {
+const ContactPage = (props) => {
     return (
         <>
-        <Navbar/>
-        <Contact/>
-        <Footer/>
+        <Navbar themeColor={props.themeColor} getColorValue={props.getColorValue}/>
+        <Contact themeColor={props.themeColor}/>
+        <Footer themeColor={props.themeColor}/>
         </>
     )
 }

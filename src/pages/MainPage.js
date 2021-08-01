@@ -6,14 +6,14 @@ import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
 
-const MainPage = () => {
+const MainPage = (props) => {
     return (
         <>
-        <Navbar/>
-        <Carousel/>
-        <Introduction/>
-        <Gallery/>
-        <Footer/>
+        <Navbar themeColor={props.themeColor} getColorValue={props.getColorValue}/>
+        <Carousel themeColor={props.themeColor}/>
+        <Introduction themeColor={props.themeColor}/>
+        <Gallery themeColor={props.themeColor}/>
+        <Footer themeColor={props.themeColor}/>
         </>
     
     )

@@ -2,10 +2,10 @@ import React from 'react'
 import { FooterContainer, FooterContent, FooterCopyright,
 FooterCopyrightContent, FooterItems, FooterTitle, FooterWrapper, FooterGap} from '../styles/FooterStyle'
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <FooterContainer>
-            <FooterGap/>
+            <FooterGap themeColor={props.themeColor}/>
             <FooterWrapper>
                 <FooterItems>
                     <FooterTitle>

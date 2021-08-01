@@ -5,12 +5,12 @@ ImgWrap, Img, textContent } from '../styles/IntroductionStyle'
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Introduction = () => {
+const Introduction = (props) => {
     useEffect(()=> {
         Aos.init({duration:2000});
     })
     return (
-        <IntroContainer>
+        <IntroContainer themeColor={props.themeColor}>
             <IntroWrapper>
                 <IntroRow>
                     <Column1>

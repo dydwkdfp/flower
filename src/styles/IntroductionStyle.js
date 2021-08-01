@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const IntroContainer = styled.div`
     background: ${({themeColor})=> (themeColor ? '#B3AEFF' : '#E1B795')};
     padding: 50px 50px;
+    transition: all 1s;
     
     @media screen and (max-width: 1280px){
         padding: 40px 40px;

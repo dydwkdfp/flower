@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 
 
-const ImageSlider = ({slides}) => {
+const ImageSlider = ({slides,themeColor}) => {
     const[current, setcurrent] = useState(0)
     const length = slides.length
 
@@ -59,7 +59,7 @@ const ImageSlider = ({slides}) => {
                             </motion.div>
                             <CarouselTextWrapper>
                             <motion.div variants={variants} initial="initial" animate={index===current ? "animate" : "initial"}>
-                            {index === current && (<CarouselTitle>{slide.Title}</CarouselTitle>)}
+                            {index === current && (<CarouselTitle themeColor={themeColor}>{slide.Title}</CarouselTitle>)}
                             </motion.div>
                             <motion.div variants={contentvariants} initial="initial" animate={index===current ? "animate" : "initial"}>
                             {index === current && (<CarouselComment>{slide.Content}</CarouselComment>)}
@@ -74,12 +74,12 @@ const ImageSlider = ({slides}) => {
     )
 }
 
-const Carousel = () => {
+const Carousel = (props) => {
     return (
         <CarouselContainer>
             <CarouselWrapper>
                 <CarouselContent>
-                    <ImageSlider slides={ImageData}/>
+                    <ImageSlider slides={ImageData} themeColor={props.themeColor}/>
                 </CarouselContent>
             </CarouselWrapper>
         </CarouselContainer>
